@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.yonasoft.areader.screens.ReaderSplashScreen
 import com.yonasoft.areader.screens.home.Home
 import com.yonasoft.areader.screens.login.ReaderLoginScreen
+import com.yonasoft.areader.screens.stats.ReaderStatsScreen
 
 @Composable
 fun ReaderNavigation() {
@@ -24,6 +25,10 @@ fun ReaderNavigation() {
 
         composable(ReaderScreens.ReaderHomeScreen.name){
             Home(navController = navController)
+        }
+
+        composable(ReaderScreens.ReaderStatsScreen.name){
+            ReaderStatsScreen(navController = navController)
         }
     }
 }
